@@ -67,9 +67,10 @@ public class PragmaticPlayer extends AbstractPlayer {
         
         for (AbstractAction action : candidateActions) {
             double totalValue = 0.0; 
-            //  rolloutCount rollouts per each action and take the average
+            //  rolloutCount rollouts per each action, then take the average
             for (int i = 0; i < rolloutCount; i++) {
-                AbstractGameState simulated = gs.copy();
+                // PresidentGameState._copy can perform redeterminisation
+                AbstractGameState simulated = gs.copy(playerID);
                 getForwardModel().next(simulated, action);
 
                 // simulate rollout from the new state
