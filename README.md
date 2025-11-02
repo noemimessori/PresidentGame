@@ -1,17 +1,13 @@
-# TAG: [Tabletop Games Framework](http://www.tabletopgames.ai/)
+# PresidentGame
+Il punto di partenza di questo progetto è stato il gioco di carte Presidente, scelto per le sue dinamiche semplici ma strategicamente ricche. Si tratta di un gioco a informazione incompleta, in cui i partecipanti non conoscono le carte degli avversari e devono adattare costantemente le proprie mosse alle situazioni di gioco, bilanciando rischio e prudenza.
+L’obiettivo principale è stato quello di sviluppare e confrontare diversi tipi di giocatori artificiali, ognuno caratterizzato da un diverso approccio decisionale: più aggressivo, più difensivo o pragmatico. In questo modo è stato possibile osservare come differenti strategie si comportino in condizioni identiche e contro avversari di natura diversa.
 
-[![license](https://img.shields.io/github/license/GAIGResearch/TabletopGames)](LICENSE)
-![top-language](https://img.shields.io/github/languages/top/GAIGResearch/TabletopGames)
-![code-size](https://img.shields.io/github/languages/code-size/GAIGResearch/TabletopGames)
-[![twitter](https://img.shields.io/twitter/follow/gameai_qmul?style=social)](https://twitter.com/intent/follow?screen_name=gameai_qmul)
-[![](https://img.shields.io/github/stars/GAIGResearch/TabletopGames.svg?label=Stars&style=social)](https://github.com/GAIGResearch/TabletopGames)
-
-The [Tabletop Games Framework (TAG)](http://tabletopgames.ai) is a Java-based benchmark for developing modern board games for AI research.  TAG provides a common skeleton for implementing tabletop games based on a common API for AI agents, a set of components and classes to easily add new games and an import module for defining data in JSON format. At present, this platform includes the implementation of seven different tabletop games that can also be used as an example for further developments. Additionally, TAG also incorporates logging functionality that allows the user to perform a detailed analysis of the game, in terms of action space, branching factor, hidden information, and other measures of interest for Game AI research.
-![Pandemic](data/imgs/Pandemic.png)
-*Example GUI for Pandemic*
+Per l’implementazione è stato utilizzato il Tabletop Games Framework (TAG).
+## TAG: [Tabletop Games Framework](http://www.tabletopgames.ai/)
+Il [Tabletop Games Framework (TAG)](http://tabletopgames.ai) è un benchmark basato su Java per lo sviluppo di giochi da tavolo moderni per la ricerca sull'intelligenza artificiale. TAG fornisce uno scheletro comune per l'implementazione di giochi da tavolo basati su un'API comune per agenti di intelligenza artificiale, un set di componenti e classi per aggiungere facilmente nuovi giochi e un modulo di importazione per la definizione dei dati in formato JSON. Attualmente, questa piattaforma include l'implementazione di sette diversi giochi da tavolo che possono anche essere utilizzati come esempio per ulteriori sviluppi. Inoltre, TAG incorpora anche funzionalità di registrazione che consentono all'utente di eseguire un'analisi dettagliata del gioco, in termini di spazio d'azione, fattore di ramificazione, informazioni nascoste e altre misure di interesse per la ricerca sull'intelligenza artificiale nei giochi.
 
 ## Games
-Currently implemented games:
+Giochi attualmente implementati:
 - [x] Battlelore: Second Edition (Richard Borg and Robert A Kouba, 2013)
 - [x] Blackjack (Uncredited, circa 1700)
 - [x] Can't Stop (Sid Sackson, 1980)
@@ -35,56 +31,14 @@ Games in progress:
 - [ ] Descent (Jesper Ejsing, John Goodenough, Frank Walls 2005)
 - [ ] Hanabi (Antoine Bauza 2010)
 - [ ] 7 Wonders (Antoine Bauza 2010)
-
+      
 ## Setting up
-The project requires Java with minimum version 8. In order to run the code, you must either download the repository, or clone it. If you are looking for a particular release, you can find all listed [here](https://github.com/GAIGResearch/TabletopGames/releases). 
+Il progetto richiede Java con almeno la versione 8. Per eseguire il codice, è necessario scaricare il repository o clonarlo. Se si sta cercando una versione specifica, è possibile trovarla qui (https://github.com/GAIGResearch/TabletopGames/releases).
 
-The simplest way to run the code is to create a new project in [IntelliJ IDEA](https://www.jetbrains.com/idea/) or a similar IDE. In IntelliJ, create a new project from existing sources, pointing to the code downloaded or cloned and selecting the **Maven** framework for import. This process should automatically set up the environment and add any project libraries as well.
+Il modo più semplice per eseguire il codice è creare un nuovo progetto in [IntelliJ IDEA](https://www.jetbrains.com/idea/) o in un IDE simile. In IntelliJ, creare un nuovo progetto da sorgenti esistenti, puntando al codice scaricato o clonato e selezionando il framework **Maven** per l'importazione. Questo processo dovrebbe configurare automaticamente l'ambiente e aggiungere anche eventuali librerie del progetto.
 
-Alternatively, open the code directly in your IDE of choice, right click the pom.xml file and setup the project with the Maven framework. Make sure src/main/java is marked as sources root. You can run the `core.Game.java` class to test if all is set up properly and compiling. [This video](https://youtu.be/-U7SCGNOcsg) includes the steps of loading the project correctly in IntelliJ.
+In alternativa, aprire il codice direttamente nell'IDE di propria scelta, fare clic con il pulsante destro del mouse sul file pom.xml e configurare il progetto con il framework Maven. Assicurarsi che src/main/java sia contrassegnato come root delle sorgenti. È possibile eseguire la classe `core.Game.java` per verificare se tutto è configurato correttamente e se la compilazione è in corso. [Questo video](https://youtu.be/-U7SCGNOcsg) include i passaggi per caricare correttamente il progetto in IntelliJ.
 
-## Getting started
-
-To get started the [website](http://tabletopgames.ai) provides various guides and descriptions of the framework.
-Another good resource is our paper ["Design and Implementation of TAG: A Tabletop Games Framework"](https://arxiv.org/abs/2009.12065).
-
-## Citing Information
-
-To cite TAG in your work, please cite this paper:
-```
-@inproceedings{gaina2020tag,
-         author= {Raluca D. Gaina and Martin Balla and Alexander Dockhorn and Raul Montoliu and Diego Perez-Liebana},
-         title= {{TAG: A Tabletop Games Framework}},
-         year= {2020},
-         booktitle= {{Experimental AI in Games (EXAG), AIIDE 2020 Workshop}},
-         abstract= {Tabletop games come in a variety of forms, including board games, card games, and dice games. In recent years, their complexity has considerably increased, with many components, rules that change dynamically through the game, diverse player roles, and a series of control parameters that influence a game's balance. As such, they also encompass novel and intricate challenges for Artificial Intelligence methods, yet research largely focuses on classical board games such as chess and Go. We introduce in this work the Tabletop Games (TAG) framework, which promotes research into general AI in modern tabletop games, facilitating the implementation of new games and AI players, while providing analytics to capture the complexities of the challenges proposed. We include preliminary results with sample AI players, showing some moderate success, with plenty of room for improvement, and discuss further developments and new research directions.},
-    }
-```
-
-## Other Materials
-
-### Visual materials
-V1 – Edited programming video (see below)<br/>
-V2 – Uncut programming video (see below)<br/>
-V3 – PowerPoint slides: https://tinyurl.com/tag-exag-ppt <br/>
-V5 – Transcript A1: https://tinyurl.com/tag-exag-tr1 <br/>
-V6 – Transcript A2: https://tinyurl.com/tag-exag-tr2 <br/>
-
-### Audio materials
-A1 – Framework presentation (see below)<br/>
-A2 – Programming (see below)<br/>
-
-### Full videos available
-EXAG 2020 presentation (A1 + V1): https://youtu.be/M81elk-NmKM<br/>
-EXAG alternative presentation (A1 + V3): https://youtu.be/ST_2Q40pzjc<br/>
-TAG introduction tutorial (A2 + V1): https://youtu.be/-U7SCGNOcsg<br/>
-TAG full programming tutorial (V2): https://youtu.be/m7DAFdViywY <br/>
-
-## Contact
-The main method to contribute to our repository directly with code, or to suggest new features, point out bugs or ask questions about the project is through [creating new Issues on this github repository](https://github.com/GAIGResearch/TabletopGames/issues) or [creating new Pull Requests](https://github.com/GAIGResearch/TabletopGames/pulls). Alternatively, you may contact the authors of the papers listed above. 
-
-You can also find out more about the [QMUL Game AI Group](http://gameai.eecs.qmul.ac.uk/).
-
-## Acknowledgements
-
-This work was partly funded by the EPSRC CDT in Intelligent Games and Game Intelligence (IGGI)  EP/L015846/1 and EPSRC research grant EP/T008962/1.
+## Per iniziare
+Per iniziare, il [sito web](http://tabletopgames.ai) fornisce diverse guide e descrizioni del framework.
+Un'altra valida risorsa è il nostro articolo ["Design and Implementation of TAG: A Tabletop Games Framework"](https://arxiv.org/abs/2009.12065).
